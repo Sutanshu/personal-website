@@ -167,6 +167,26 @@ function App() {
     );
   };
 
+  const getSkills = () => {
+    return (
+      <Box
+        sx={{
+          height: "100vh",
+          width: "100vw",
+          border: "1px solid black",
+          backgroundColor: "white",
+          justifyContent: "center",
+          alignItems: "center",
+          display: "flex",
+          flexDirection: "column",
+          color: "black",
+        }}
+      >
+        <h1 style={{ color: "black" }}>Skills</h1>
+      </Box>
+    );
+  };
+
   const callback = (entries: any) => {
     entries.forEach((entry: any) => {
       if (entry.isIntersecting) {
@@ -231,6 +251,7 @@ function App() {
       {/* {getSearchEngine()} */}
       {/* {getPDF()} */}
       {getExperience()}
+      {getSkills()}
     </>
   );
 }
