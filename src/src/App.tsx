@@ -1,56 +1,143 @@
-import * as React from "react";
-import "./App.css";
 import Box from "@mui/material/Box";
 import { Button } from "@mui/material";
-import { useEffect } from "react";
-import { Document, Page } from "react-pdf";
-import "react-pdf/dist/esm/Page/AnnotationLayer.css";
-import "react-pdf/dist/esm/Page/TextLayer.css";
 import Typewriter from "typewriter-effect";
+import WordCloud from "./WordCloud";
 
 function App() {
-  const [query, setQuery] = React.useState("");
-  const ref = React.useRef<HTMLInputElement>(null);
-  const [selected, setSelected] = React.useState(true);
-
-  const getPDF = () => {
-    return (
-      <Box
-        sx={{
-          height: "90vh",
-          backgroundColor: "white",
-          justifyContent: "center",
-          alignItems: "flex-start",
-          display: "flex",
-        }}
-      >
-        <Document
-          file="Sutanshu_Seth_Resume.pdf"
-          onLoadSuccess={() => console.log("success")}
-          onLoadError={(e) => console.log("error", e)}
-        >
-          <Page pageNumber={1} />
-        </Document>
-      </Box>
-    );
-  };
-
   const Experience = () => {
     return (
       <Box
+        //@ts-ignore
         sx={{
-          height: "100vh",
+          // height: "100vh",
           backgroundColor: "white",
-          justifyContent: "center",
-          alignItems: "center",
           display: "flex",
+          alignItems: "center",
           flexDirection: "column",
-          color: "black",
         }}
       >
-        <h1 ref={ref} style={{ color: "black" }}>
-          Experience
-        </h1>
+        <h1 style={{ color: "black", fontSize: "40px" }}>Experience</h1>
+
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "flex-start",
+            alignItems: "flex-start",
+            paddingLeft: "10%",
+            width: "70vw",
+            fontSize: "25px",
+          }}
+        >
+          <h3
+            style={{
+              fontSize: "30px",
+            }}
+          >
+            Software Developer Intern, Investing Team
+          </h3>
+          <h2>Wealthsimple</h2>
+          <h5
+            style={{
+              fontSize: "20px",
+              color: "grey",
+            }}
+          >
+            <strong>May 2022 - August 2022</strong>
+          </h5>
+          <li>
+            <p>
+              Shipped several features and experiments using{" "}
+              <span style={{ color: "#15B6DF" }}>
+                React, TypeScript, Ruby on Rails, and GraphQL.{" "}
+              </span>
+              This served as a function of{" "}
+              <span style={{ color: "#15B6DF" }}>
+                lowering churn rates, more than 18,500 new clients, $27M net
+                deposits, and lowered withdrawal rates by 6%.{" "}
+              </span>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Optimizing scaling queries and stepping scales that led to reduced
+              costs and resources by eliminating{" "}
+              <span style={{ color: "#15B6DF" }}>
+                3 additional AWS Athena containers.{" "}
+              </span>
+            </p>
+          </li>
+          <li>
+            <p>
+              Volunteered and actively participated in the build release working
+              group, resulting in a{" "}
+              <span style={{ color: "#15B6DF" }}>
+                more optimized way of bundling our apps, and cutting our build
+                time by 33%.{" "}
+              </span>
+            </p>
+          </li>
+          <h3
+            style={{
+              paddingTop: "10%",
+              fontSize: "30px",
+            }}
+          >
+            Software Developer Intern, QuickBooks Onboarding
+          </h3>
+          <h2>Intuit</h2>
+          <h5
+            style={{
+              fontSize: "20px",
+              color: "grey",
+            }}
+          >
+            <strong>January 2021 - December 2021</strong>
+          </h5>
+          <li>
+            <p>
+              Built a <span style={{ color: "#15B6DF" }}>React </span> component
+              resolver that parsed JSON files to build components. This{" "}
+              <span style={{ color: "#15B6DF" }}>
+                lowered time to ship experiments dramatically, and reduced the
+                size of codebase by 62%.{" "}
+              </span>
+            </p>
+
+            <li>
+              <p>
+                Configured <span style={{ color: "#15B6DF" }}>Splunk </span>{" "}
+                dashboards to receive logs across various endpoints through{" "}
+                <span style={{ color: "#15B6DF" }}>
+                  AWS Lambda, and CloudWatch.{" "}
+                </span>{" "}
+                Ordered based on priority, these logs helped address issues{" "}
+                <span style={{ color: "#15B6DF" }}>
+                  way faster than before.
+                </span>
+              </p>
+            </li>
+            <li>
+              <p>
+                Worked on integration, and system testing using{" "}
+                <span style={{ color: "#15B6DF" }}>Cypress.</span>
+                Additionally wrote tons of unit tests using{" "}
+                <span style={{ color: "#15B6DF" }}>Jest </span> to dramatically
+                <span style={{ color: "#15B6DF" }}>
+                  increase code coverage.{" "}
+                </span>
+              </p>
+            </li>
+            <li>
+              <p>
+                Led the daily{" "}
+                <span style={{ color: "#15B6DF" }}> stand ups, </span> actively
+                participated in grooming our backlog.
+              </p>
+            </li>
+          </li>
+        </div>
       </Box>
     );
   };
@@ -58,10 +145,10 @@ function App() {
   const Skills = () => {
     return (
       <Box
+        //@ts-ignore
         sx={{
           height: "100vh",
           width: "100vw",
-          border: "1px solid black",
           backgroundColor: "white",
           justifyContent: "center",
           alignItems: "center",
@@ -70,7 +157,15 @@ function App() {
           color: "black",
         }}
       >
-        <h1 style={{ color: "black" }}>Skills</h1>
+        <h1 style={{ color: "black", fontSize: "40px" }}>A few skills</h1>
+        <div
+          style={{
+            height: "100vh",
+            width: "80vw",
+          }}
+        >
+          <WordCloud />
+        </div>
       </Box>
     );
   };
@@ -78,6 +173,7 @@ function App() {
   const NavBar = () => {
     return (
       <Box
+        //@ts-ignore
         sx={{
           display: "flex",
           flexDirection: "row",
@@ -85,10 +181,19 @@ function App() {
           justifyContent: "space-between",
           height: "10vh",
           width: "100vw",
-          backgroundColor: "white",
         }}
       >
-        <h1>Sutanshu Seth</h1>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
+            paddingLeft: "43%",
+          }}
+        >
+          <h1>Sutanshu Seth</h1>
+        </div>
         <div
           style={{
             display: "flex",
@@ -101,9 +206,12 @@ function App() {
           }}
         >
           <Button
+            href="Sutanshu_Seth_Resume.pdf"
+            target="_blank"
             sx={{
+              fontSize: "15px",
               ":hover": {
-                backgroundColor: "#3492CB",
+                backgroundColor: "#3FC9ED",
                 color: "white",
               },
               color: "black",
@@ -112,9 +220,12 @@ function App() {
             Resume
           </Button>
           <Button
+            href="https://github.com/Sutanshu"
+            target="_blank"
             sx={{
+              fontSize: "15px",
               ":hover": {
-                backgroundColor: "#3492CB",
+                backgroundColor: "#3FC9ED",
                 color: "white",
               },
               color: "black",
@@ -123,9 +234,12 @@ function App() {
             Github
           </Button>
           <Button
+            href="https://www.linkedin.com/in/sutanshu-seth"
+            target="_blank"
             sx={{
+              fontSize: "15px",
               ":hover": {
-                backgroundColor: "#3492CB",
+                backgroundColor: "#3FC9ED",
                 color: "white",
               },
               color: "black",
@@ -149,6 +263,7 @@ function App() {
   const HomePage = (): JSX.Element => {
     return (
       <Box
+        //@ts-ignore
         sx={{
           display: "flex",
           flexDirection: "column",
@@ -177,7 +292,7 @@ function App() {
             <Typewriter
               options={{
                 strings: [
-                  '<strong>  <span style="font-size: 50px;"> Hello, my name is Sutanshu Seth. I am a Software Developer!</span></strong>',
+                  '<strong>  <span style="font-size: 50px; color: black;"> Hello, my name is </span> <span style="font-size: 50px; color: #3FC9ED;">Sutanshu Seth. </span> <span style="font-size: 50px; color: black;"> I am a </span> <span style="font-size: 50px; color: #3FC9ED;">Software Developer!</span></strong>',
                 ],
                 autoStart: true,
                 loop: true,
@@ -190,47 +305,16 @@ function App() {
     );
   };
 
-  const callback = (entries: any) => {
-    entries.forEach((entry: any) => {
-      if (entry.isIntersecting) {
-        if (ref && ref.current) {
-          ref.current.style.transform = "translateX(60%)";
-          ref.current.style.transition = "transform 2s";
-        }
-      } else {
-        if (ref && ref.current) {
-          ref.current.style.transform = "translateX(-50%)";
-          ref.current.style.transition = "transform 2s";
-          return;
-        }
-      }
-    });
-  };
-
-  const observer = new IntersectionObserver(callback, {
-    root: ref.current,
-    // Creates a threshold of with increments of 0.01
-    threshold: new Array(101).fill(0).map((v, i) => i * 0.01),
-  });
-
-  // intersection observer
-  useEffect(() => {
-    if (ref && ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => {
-      if (ref && ref.current) {
-        observer.unobserve(ref.current);
-      }
-    };
-  }, [ref, observer]);
   return (
-    <>
+    <div
+      style={{
+        fontFamily: "Playfair Display, sans-serif",
+      }}
+    >
       <HomePage />
-      <Experience />
       <Skills />
-    </>
+      <Experience />
+    </div>
   );
 }
 
