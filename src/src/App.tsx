@@ -1,13 +1,12 @@
 import * as React from "react";
 import "./App.css";
 import Box from "@mui/material/Box";
-import SearchIcon from "@mui/icons-material/Search";
-import TextField from "@mui/material/TextField";
 import { Button } from "@mui/material";
 import { useEffect } from "react";
 import { Document, Page } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import "react-pdf/dist/esm/Page/TextLayer.css";
+import Typewriter from "typewriter-effect";
 
 function App() {
   const [query, setQuery] = React.useState("");
@@ -138,6 +137,15 @@ function App() {
       </Box>
     );
   };
+  const Memoji = (): JSX.Element => {
+    return (
+      <img
+        src="memoji.png"
+        alt="memoji"
+        style={{ height: "250px", width: "250px" }}
+      />
+    );
+  };
   const HomePage = (): JSX.Element => {
     return (
       <Box
@@ -147,25 +155,36 @@ function App() {
           justifyContent: "normal",
           height: "100vh",
           width: "100vw",
-          backgroundColor: "black",
-          border: "1px solid black",
         }}
       >
         <NavBar />
         <Box
           sx={{
-            height: "100vh",
-            backgroundColor: "white",
-            justifyContent: "center",
-            alignItems: "center",
             display: "flex",
             flexDirection: "column",
-            color: "black",
+            justifyContent: "center",
+            alignItems: "center",
           }}
         >
-          <h1 ref={ref} style={{ color: "black" }}>
-            Home
-          </h1>
+          <Memoji />
+          <Box
+            sx={{
+              backgroundColor: "white",
+              paddingTop: "8%",
+              color: "black",
+            }}
+          >
+            <Typewriter
+              options={{
+                strings: [
+                  '<strong>  <span style="font-size: 50px;"> Hello, my name is Sutanshu Seth. I am a Software Developer!</span></strong>',
+                ],
+                autoStart: true,
+                loop: true,
+                delay: 35,
+              }}
+            />
+          </Box>
         </Box>
       </Box>
     );
