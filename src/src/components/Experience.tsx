@@ -6,13 +6,12 @@ const Experience = () => {
       //@ts-ignore
       sx={{
         // height: "100vh",
-        backgroundColor: "white",
         display: "flex",
         alignItems: "center",
         flexDirection: "column",
       }}
     >
-      <h1 style={{ color: "black", fontSize: "40px" }}>Experience</h1>
+      <h1 style={{ color: "white", fontSize: "40px" }}>Experience</h1>
 
       <div
         style={{

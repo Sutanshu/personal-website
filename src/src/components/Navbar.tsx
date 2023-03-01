@@ -77,7 +77,7 @@ const NavBar = () => {
                   backgroundColor: "#3FC9ED",
                   color: "white",
                 },
-                color: "black",
+                color: "white",
               }}
             >
               Resume
@@ -91,7 +91,7 @@ const NavBar = () => {
                   backgroundColor: "#3FC9ED",
                   color: "white",
                 },
-                color: "black",
+                color: "white",
               }}
             >
               Github
@@ -105,7 +105,7 @@ const NavBar = () => {
                   backgroundColor: "#3FC9ED",
                   color: "white",
                 },
-                color: "black",
+                color: "white",
               }}
             >
               LinkedIn

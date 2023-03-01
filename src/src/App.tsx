@@ -13,6 +13,8 @@ function App() {
     <div
       style={{
         fontFamily: "Playfair Display, sans-serif",
+        backgroundColor: "black",
+        color: "white",
       }}
     >
       <HomePage />
@@ -41,7 +43,7 @@ function App() {
                 backgroundColor: "#3FC9ED",
                 color: "white",
               },
-              color: "black",
+              color: "white",
             }}
           >
             Resume
@@ -55,7 +57,7 @@ function App() {
                 backgroundColor: "#3FC9ED",
                 color: "white",
               },
-              color: "black",
+              color: "white",
             }}
           >
             Github
@@ -69,7 +71,7 @@ function App() {
                 backgroundColor: "#3FC9ED",
                 color: "white",
               },
-              color: "black",
+              color: "white",
             }}
           >
             LinkedIn

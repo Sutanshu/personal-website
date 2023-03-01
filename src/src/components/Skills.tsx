@@ -13,15 +13,14 @@ const Skills = () => {
         paddingTop: isMobile ? "10vh" : "0vh",
         height: "100vh",
         width: "100vw",
-        backgroundColor: "white",
         justifyContent: "center",
         alignItems: "center",
         display: "flex",
         flexDirection: "column",
-        color: "black",
+        color: "white",
       }}
     >
-      <h1 style={{ color: "black", fontSize: "40px" }}>A few skills</h1>
+      <h1 style={{ color: "white", fontSize: "40px" }}>A few skills</h1>
       <div
         style={{
           height: "100vh",

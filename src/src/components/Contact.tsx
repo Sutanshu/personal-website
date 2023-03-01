@@ -25,7 +25,7 @@ export default function Contact() {
           onInit={(typewriter) => {
             typewriter
               .typeString(
-                '<strong><span style="font-size: 50px; color: black;"> #Open<span style="font-size: 50px; color: #3FC9ED;">ToWork</span></span></strong>'
+                '<strong><span style="font-size: 50px; color: white;"> #Open<span style="font-size: 50px; color: #3FC9ED;">ToWork</span></span></strong>'
               )
               .start();
           }}
@@ -67,7 +67,7 @@ export default function Contact() {
               color: "white",
               border: "2px solid #3FC9ED",
             },
-            color: "black",
+            color: "white",
             fontFamily: "Playfair Display",
           }}
         >

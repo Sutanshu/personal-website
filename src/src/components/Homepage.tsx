@@ -35,15 +35,16 @@ const HomePage = (): JSX.Element => {
         <Memoji />
         <Box
           sx={{
-            backgroundColor: "white",
+            // backgroundColor: "black",
             paddingTop: "8%",
-            color: "black",
+            color: "white",
+            textAlign: "center",
           }}
         >
           <Typewriter
             options={{
               strings: [
-                '<strong>  <span style="font-size: 50px; color: black;"> Hello, my name is </span> <span style="font-size: 50px; color: #3FC9ED;">Sutanshu Seth. </span> <span style="font-size: 50px; color: black;"> I am a </span> <span style="font-size: 50px; color: #3FC9ED;">Software Developer!</span></strong>',
+                '<strong>  <span style="font-size: 50px; color: white; backgroundColor: "black";> Hello, my name is </span> <span style="font-size: 50px; color: #3FC9ED;">Sutanshu Seth. </span> <span style="font-size: 50px; color: white;"> I am a </span> <span style="font-size: 50px; color: #3FC9ED;">Software Developer!</span></strong>',
               ],
               autoStart: true,
               loop: true,
