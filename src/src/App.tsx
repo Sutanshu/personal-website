@@ -2,6 +2,7 @@ import Experience from "./components/Experience";
 import Skills from "./components/Skills";
 import HomePage from "./components/Homepage";
 import Button from "@mui/material/Button";
+import Contact from "./components/Contact";
 
 function App() {
   const isMobile =
@@ -17,6 +18,8 @@ function App() {
       <HomePage />
       <Skills />
       <Experience />
+      <Contact />
+
       {isMobile && (
         <div
           style={{

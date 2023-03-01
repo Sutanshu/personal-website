@@ -115,10 +115,13 @@ const Experience = () => {
           <li>
             <p>
               Worked on integration, and system testing using{" "}
-              <span style={{ color: "#15B6DF" }}>Cypress.</span>
-              Additionally wrote tons of unit tests using{" "}
+              <span style={{ color: "#15B6DF" }}>Cypress.</span> Additionally
+              wrote tons of unit tests using{" "}
               <span style={{ color: "#15B6DF" }}>Jest </span> to dramatically
-              <span style={{ color: "#15B6DF" }}>increase code coverage. </span>
+              <span style={{ color: "#15B6DF" }}>
+                {" "}
+                increase code coverage.{" "}
+              </span>
             </p>
           </li>
           <li>
