@@ -24,7 +24,7 @@ function App() {
       <Experience />
       <Contact />
 
-      {!isMobile && (
+      {isMobile && (
         <div
           style={{
             display: "flex",
