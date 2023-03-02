@@ -32,7 +32,7 @@ function App() {
             justifyContent: "space-between",
             justifyItems: "center",
             alignItems: "center",
-            paddingTop: "2vh",
+            paddingTop: "10vh",
             height: "5vh",
             backgroundColor: "black",
           }}
@@ -46,7 +46,7 @@ function App() {
                 backgroundColor: "#3FC9ED",
                 color: "white",
               },
-              color: "black",
+              color: "white",
             }}
           >
             Resume
@@ -60,7 +60,7 @@ function App() {
                 backgroundColor: "#3FC9ED",
                 color: "white",
               },
-              color: "black",
+              color: "white",
             }}
           >
             Github
@@ -74,7 +74,7 @@ function App() {
                 backgroundColor: "#3FC9ED",
                 color: "white",
               },
-              color: "black",
+              color: "white",
             }}
           >
             LinkedIn
