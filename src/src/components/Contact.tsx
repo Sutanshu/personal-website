@@ -17,7 +17,7 @@ export default function Contact() {
         justifyContent: "center",
         justifyItems: "center",
         alignItems: "center",
-        paddingTop: isMobile ? "10vh" : "2vh",
+        paddingTop: isMobile ? "20vh" : "2vh",
         fontSize: "20px",
       }}
     >

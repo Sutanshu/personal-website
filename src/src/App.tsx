@@ -34,6 +34,7 @@ function App() {
             alignItems: "center",
             paddingTop: "2vh",
             height: "5vh",
+            backgroundColor: "black",
           }}
         >
           <Button
@@ -45,7 +46,7 @@ function App() {
                 backgroundColor: "#3FC9ED",
                 color: "white",
               },
-              color: "white",
+              color: "black",
             }}
           >
             Resume
@@ -59,7 +60,7 @@ function App() {
                 backgroundColor: "#3FC9ED",
                 color: "white",
               },
-              color: "white",
+              color: "black",
             }}
           >
             Github
@@ -73,7 +74,7 @@ function App() {
                 backgroundColor: "#3FC9ED",
                 color: "white",
               },
-              color: "white",
+              color: "black",
             }}
           >
             LinkedIn
