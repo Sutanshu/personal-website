@@ -3,6 +3,10 @@ import Typewriter from "typewriter-effect";
 import { Box } from "@mui/system";
 
 export default function Contact() {
+  const isMobile =
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    );
   return (
     <Box
       //@ts-ignore
@@ -13,7 +17,7 @@ export default function Contact() {
         justifyContent: "center",
         justifyItems: "center",
         alignItems: "center",
-        paddingTop: "2vh",
+        paddingTop: isMobile ? "10vh" : "2vh",
         fontSize: "20px",
       }}
     >

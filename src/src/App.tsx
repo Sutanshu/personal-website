@@ -15,6 +15,8 @@ function App() {
         fontFamily: "Playfair Display, sans-serif",
         backgroundColor: "black",
         color: "white",
+        display: "flex",
+        flexDirection: "column",
       }}
     >
       <HomePage />
@@ -22,7 +24,7 @@ function App() {
       <Experience />
       <Contact />
 
-      {isMobile && (
+      {!isMobile && (
         <div
           style={{
             display: "flex",
